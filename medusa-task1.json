@@ -1,45 +1,42 @@
 {
-    "taskDefinitionArn": "arn:aws:ecs:ap-south-1:637423411572:task-definition/nodejs-task:1",
+    "taskDefinitionArn": "arn:aws:ecs:us-east-1:637423411572:task-definition/medusa-task1:7",
     "containerDefinitions": [
         {
-            "name": "nodejs-app",
-            "image": "637423411572.dkr.ecr.ap-south-1.amazonaws.com/nodejs-app",
+            "name": "medusa-app",
+            "image": "637423411572.dkr.ecr.us-east-1.amazonaws.com/medusa-app:35d188b090ec50d0ad0e7d5f1fc26072fbb2d0b7",
             "cpu": 0,
             "portMappings": [
                 {
-                    "name": "nodejs-app-5000-tcp",
-                    "containerPort": 5000,
-                    "hostPort": 5000,
+                    "name": "medusa-app-9000-tcp",
+                    "containerPort": 9000,
+                    "hostPort": 9000,
                     "protocol": "tcp",
                     "appProtocol": "http"
                 }
             ],
             "essential": true,
             "environment": [],
-            "environmentFiles": [],
             "mountPoints": [],
             "volumesFrom": [],
-            "ulimits": [],
             "logConfiguration": {
                 "logDriver": "awslogs",
                 "options": {
-                    "awslogs-group": "/ecs/nodejs-task",
+                    "awslogs-group": "/ecs/medusa-task1",
                     "mode": "non-blocking",
                     "awslogs-create-group": "true",
                     "max-buffer-size": "25m",
-                    "awslogs-region": "ap-south-1",
+                    "awslogs-region": "us-east-1",
                     "awslogs-stream-prefix": "ecs"
-                },
-                "secretOptions": []
+                }
             },
             "systemControls": []
         }
     ],
-    "family": "nodejs-task",
+    "family": "medusa-task1",
     "taskRoleArn": "arn:aws:iam::637423411572:role/ecsTaskExecutionRole",
     "executionRoleArn": "arn:aws:iam::637423411572:role/ecsTaskExecutionRole",
     "networkMode": "awsvpc",
-    "revision": 1,
+    "revision": 7,
     "volumes": [],
     "status": "ACTIVE",
     "requiresAttributes": [
@@ -88,7 +85,7 @@
         "cpuArchitecture": "X86_64",
         "operatingSystemFamily": "LINUX"
     },
-    "registeredAt": "2024-09-03T08:19:10.730Z",
-    "registeredBy": "arn:aws:iam::637423411572:root",
+    "registeredAt": "2024-09-23T06:57:04.867Z",
+    "registeredBy": "arn:aws:iam::637423411572:user/Saaradha",
     "tags": []
 }
