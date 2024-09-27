@@ -73,6 +73,6 @@ jobs:
         uses: aws-actions/amazon-ecs-deploy-task-definition@v1
         with:
           task-definition: ${{ steps.task-def.outputs.task-definition }}
-          service: medusa-service2
+          service: app-service
           cluster: ecscluster
           wait-for-service-stability: true    
