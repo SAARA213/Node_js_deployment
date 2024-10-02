@@ -1,5 +1,5 @@
 {
-    "taskDefinitionArn": "arn:aws:ecs:us-east-1:637423411572:task-definition/medusa-task1:9",
+    "taskDefinitionArn": "arn:aws:ecs:us-east-1:637423411572:task-definition/medusa-task:4",
     "containerDefinitions": [
         {
             "name": "medusa-app",
@@ -7,9 +7,9 @@
             "cpu": 0,
             "portMappings": [
                 {
-                    "name": "medusa-app-9000-tcp",
-                    "containerPort": 9000,
-                    "hostPort": 9000,
+                    "name": "medusa-app-5000-tcp",
+                    "containerPort": 5000,
+                    "hostPort": 5000,
                     "protocol": "tcp",
                     "appProtocol": "http"
                 }
@@ -23,7 +23,7 @@
             "logConfiguration": {
                 "logDriver": "awslogs",
                 "options": {
-                    "awslogs-group": "/ecs/medusa-task1",
+                    "awslogs-group": "/ecs/medusa-task",
                     "mode": "non-blocking",
                     "awslogs-create-group": "true",
                     "max-buffer-size": "25m",
@@ -35,11 +35,11 @@
             "systemControls": []
         }
     ],
-    "family": "medusa-task1",
+    "family": "medusa-task",
     "taskRoleArn": "arn:aws:iam::637423411572:role/ecsTaskExecutionRole",
     "executionRoleArn": "arn:aws:iam::637423411572:role/ecsTaskExecutionRole",
     "networkMode": "awsvpc",
-    "revision": 9,
+    "revision": 4,
     "volumes": [],
     "status": "ACTIVE",
     "requiresAttributes": [
@@ -88,7 +88,7 @@
         "cpuArchitecture": "X86_64",
         "operatingSystemFamily": "LINUX"
     },
-    "registeredAt": "2024-09-27T05:59:25.993Z",
+    "registeredAt": "2024-10-02T08:01:57.109Z",
     "registeredBy": "arn:aws:iam::637423411572:root",
     "tags": []
 }
